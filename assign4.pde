@@ -149,11 +149,11 @@ void alienMaker(int num,int numInCol) {
   aList[0]= new Alien(50, 50);
   for (int i=0; i<num; i++){
     
-    int col = i / numInCol;
-    int row = i % numInCol;
+    float col = i / numInCol;
+    float row = i % numInCol;
     
-    int x = 40 + (50*row);
-    int y = 50 + (50*col);
+    int x = 40 + int((50*row));
+    int y = 50 + int((50*col));
     aList[i]= new Alien(x, y);
     drawAlien();
     }
