@@ -90,7 +90,7 @@ void draw() {
       status = GAME_LOSE;
     }
 
-    if(point == 400){
+    if(point == 300){
       status = GAME_WIN;
     }
  
@@ -106,7 +106,7 @@ void draw() {
   case GAME_WIN:
     /*---------Print Text-------------*/
     printText(40,"WINNER",300);
-    printText(20,"SCORE:"+"400",340);
+    printText(20,"SCORE:"+"300",340);
     /*--------------------------------*/
     winAnimate();
     break;
@@ -269,7 +269,7 @@ void checkAlienDead() {
 /*---------Alien Drop Laser-----------------*/
 void alienShoot(int frame){
   if(countLaserFrame == frame){
-     int i=int(random(50));
+     int i=int(random(31));
      Alien alien = aList[i];
     if(alien != null && !alien.die){
       lList[laserNum]= new Laser(alien.aX,alien.aY);
@@ -381,7 +381,7 @@ void reset() {
   
 
   /*-----------Call Make Alien Function--------*/
-  alienMaker(40,8);
+  alienMaker(30,10);
   ship.posX = width/2;
   ship.posY = 460;
   ship.upGrade = false;
