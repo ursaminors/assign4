@@ -23,7 +23,7 @@ int laserNum;
 
 
 void setup() {
-//frameRate(500);
+frameRate(500);
   status = GAME_START;
 
   bList = new Bullet[30];
@@ -202,25 +202,24 @@ void drawAlien() {
       alien.display(); //Draw Alien
 
       /*---------Call Check Line Hit---------*/
-   //   lineHit();
+      lineHit();
       /*--------------------------------------*/
     }
   }
 }
 
 /*--------Check Line Hit---------*/
-/*void lineHit(){
+void lineHit(){
+  for (int j=0; j<aList.length-1; j++) {
+    Alien alien = aList[j];
+    if(alien != null && alien.die == false){
+      if ((alien.aY+10) > 420){
+        status = GAME_LOSE;
+      }
+    }
+  }
+}
 
-for (int j=0; j<aList.length-1; j++) {
-Alien alien = aList[j];
-if(alien != null ){
-if ((alien.aY+10) > 420 && !aList[j]){
-status = GAME_LOSE;
-}
-}
-}
-}
-*/
 /*---------Ship Shoot-------------*/
 void shootBullet(int frame) {
   if ( key == ' ' && countBulletFrame>frame) {
