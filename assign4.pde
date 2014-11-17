@@ -23,7 +23,7 @@ int laserNum;
 
 
 void setup() {
-frameRate(500);
+
   status = GAME_START;
 
   bList = new Bullet[30];
