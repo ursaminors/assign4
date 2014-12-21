@@ -155,7 +155,7 @@ void alienMaker(int num,int numInCol) {
     int x = 40 + int((50*row));
     int y = 50 + int((50*col));
     aList[i]= new Alien(x, y);
-    drawAlien();
+    
     }
 }
 
