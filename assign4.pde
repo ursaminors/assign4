@@ -149,8 +149,8 @@ void alienMaker(int num,int numInCol) {
   aList[0]= new Alien(50, 50);
   for (int i=0; i<num; i++){
     
-    float col = float(i / numInCol);
-    float row = float(i % numInCol);
+    int col = int(i / numInCol);
+    int row = int(i % numInCol);
     
     int x = 40 + int((50*row));
     int y = 50 + int((50*col));
